@@ -1,0 +1,179 @@
+
+
+Tạo container
+docker run -d --name pm_db -e POSTGRES_USER=devops -e POSTGRES_PASSWORD=rbNyb3cTNLxeM -e POSTGRES_DB=pm_db -p 5433:5432 postgres:16-alpine
+
+Tạo image
+docker build -t pm_backend .
+
+tạo container 
+docker run -d --name pm_backend -p 8081:8081 pm_backend
+
+stop va xoa container cu
+docker rm -f pm_backend
+
+chay lenh
+./init_database.sh
+
+dockerfile backend
+====================================
+# Build stage
+FROM golang:1.25-alpine AS builder
+
+WORKDIR /app
+
+# Copy go mod and sum files
+COPY backend/go.mod backend/go.sum ./
+
+# Download dependencies
+RUN go mod download
+
+# Copy the rest of the source code
+COPY backend/ .
+
+# Build the application
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main ./cmd/server/main.go
+
+# Final stage
+FROM alpine:latest
+
+# Install CA certificates
+RUN apk --no-cache add ca-certificates tzdata
+
+WORKDIR /root/
+
+# Copy the binary from the builder stage
+COPY --from=builder /app/main .
+
+# Copy internal/infrastructure/db/migrations for database migrations
+COPY --from=builder /app/internal/infrastructure/db/migrations ./internal/infrastructure/db/migrations
+
+# Expose the API port
+EXPOSE 8081
+
+# Command to run the application
+CMD ["./main"]
+========================================
+
+
+docker build -t pm_frontend .
+
+docker run -d --name pm_frontend -p 80:80 pm_frontend
+
+
+chạy docker comepose
+
+docker compose up -d --build
+
+
+# Nếu không build cùng trong file docker comepose
+DATABASE_URL=postgres://devops:rbNyb3cTNLxeM@host.docker.internal:5433/pm_db?sslmode=disable
+
+
+docker run --rm -e PGPASSWORD=rbNyb3cTNLxeM postgres:16-alpine psql -h host.docker.internal -p 5433 -U devops -d pm_db -c "INSERT INTO users (username, email, hashed_password, full_name, role_id, is_active, is_admin) VALUES ('root', 'root@example.com', '\$2a\$10\$nFVpvMZgQm1Dd/RQaDzXCe5XbH2QX82oe0Iy8mgiXOwvbn4JaoTV.', 'Root Administrator', 1, true, true);"
+
+chạy api đăng ký
+curl -X POST http://localho
+st:8081/api/v1/auth/register \
+>   -H "Content-Type: application/json" \
+>   -d '{
+    "email": "hieu@example.com",
+    "password": "password",
+    "full_name": "Nguyen Le Hieu",
+     "is_admin": true
+  }'
+{"message":"Đăng ký thành công"}%  
+
+
+docker stop pm_db_container && docker rm pm_db_container
+
+docker build -t pm-db -f installation/db.Dockerfile .
+
+docker run -d \
+  --name pm_db_container \
+  -p 5433:5432 \
+  -e POSTGRES_USER=postgres \
+  -e POSTGRES_PASSWORD=postgres \
+  -e POSTGRES_DB=pm_db \
+  pm-db
+
+  docker stop pm_db_container && docker rm pm_db_container && docker build -t pm-db -f installation/db.Dockerfile .
+
+
+
+
+
+
+Hướng dẫn chạy các container Docker riêng biệt
+Dưới đây là hướng dẫn cách build và chạy từng container (Database, Backend, Frontend) một cách độc lập từ thư mục gốc của dự án (project_task_mgmt-main).
+
+Lưu ý: Bạn cần phải mở Terminal và đứng ở thư mục gốc của dự án (/Users/lehieu/work/AIPROJECT/project_task_mgmt-main) để chạy các lệnh bên dưới, vì các Dockerfile đều sử dụng context từ thư mục gốc.
+
+1. Database (PostgreSQL)
+Bước 1: Build image (BẮT BUỘC CHẠY ĐẦU TIÊN) Lỗi pull access denied for pm-db xảy ra là do bạn chưa build image trên máy của mình. Hãy chạy lệnh này trước:
+
+bash
+docker build -t pm-db -f installation/db.Dockerfile .
+Bước 2: Chạy container
+
+bash
+docker run -d \
+  --name pm_db_container \
+  -p 5433:5432 \
+  -e POSTGRES_USER=devops \
+  -e POSTGRES_PASSWORD=rbNyb3cTNLxeM \
+  -e POSTGRES_DB=pm_db \
+  pm-db
+(Nếu muốn lưu trữ dữ liệu vĩnh viễn (persistent data), bạn có thể thêm -v pm_postgres_data:/var/lib/postgresql/data vào trong lệnh run).
+
+2. Backend (Go)
+Backend cần kết nối đến Database. Nếu bạn chạy trên cùng máy tính (localhost), bạn có thể dùng host.docker.internal để backend trong container có thể thấy database ở port 5432 ở máy host.
+
+Bước 1: Build image
+
+bash
+docker build -t pm-backend -f installation/backend.Dockerfile .
+Bước 2: Chạy container
+
+bash
+docker run -d \
+  --name pm_backend_container \
+  -p 8081:8081 \
+  -e PORT=8081 \
+  -e DATABASE_URL="postgres://devops:rbNyb3cTNLxeM@host.docker.internal:5433/pm_db?sslmode=disable" \
+  pm-backend
+
+docker run -d --name pm_backend_container -p 8081:8081 -e PORT=8081 -e DATABASE_URL="postgres://devops:rbNyb3cTNLxeM@host.docker.internal:5433/pm_db?sslmode=disable" pm-backend
+
+(Nếu bạn dùng network riêng của Docker, bạn cần chỉnh DB_HOST thành tên IP hoặc tên container của DB trong network đó).
+
+3. Frontend (React/Nginx)
+Bước 1: Build image (Việc này có thể mất một chút thời gian vì cần cài đặt npm package và build production)
+
+bash
+docker build -t pm-frontend -f installation/frontend.Dockerfile .
+Bước 2: Chạy container
+
+bash
+docker run -d \
+  --name pm_frontend_container \
+  -p 80:80 \
+  --add-host backend:host-gateway \
+  pm-frontend
+
+Bạn sau đó có thể truy cập frontend trên trình duyệt qua địa chỉ: http://localhost.
+
+Mẹo hữu ích
+Để xem danh sách các container đang chạy: docker ps
+Để dừng một container: docker stop <tên_container> (Ví dụ: docker stop pm_backend_container)
+Để xoá một container: docker rm <tên_container> (Bạn cần stop trước khi xoá)
+Để xem log của container: docker logs -f <tên_container>
+
+
+docker ps | grep backend
+
+docker exec pm_backend_container wget -qO- http://localhost:8081/a
+
+docker rm -f pm_backend_container && docker run -d --name pm_backend_container -p 8081:8081 -e PORT=8081 -e DATABASE_URL="postgres://devops:rbNyb3cTNLxeM@host.docker.internal:5433/pm_db?sslmode=disable" pm-backend
+
+

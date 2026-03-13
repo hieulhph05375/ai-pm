@@ -1,0 +1,50 @@
+version: '3.8'
+services:
+  pm_db:
+    image: postgres:16-alpine
+    container_name: pm_db
+    restart: always
+    env_file:
+      - .env
+    environment:
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-postgres}
+      POSTGRES_DB: ${DB_NAME:-pm_db}
+    ports:
+      - "${DB_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ../backend/internal/infrastructure/db/migrations:/docker-entrypoint-initdb.d/migrations
+      - ./seed_production.sql:/docker-entrypoint-initdb.d/seed_production.sql
+      - ./docker_postgres_init.sh:/docker-entrypoint-initdb.d/init.sh
+
+  pm_backend:
+    build:
+      context: ..
+      dockerfile: installation/backend.Dockerfile
+    container_name: pm_backend
+    restart: always
+    env_file:
+      - .env
+    depends_on:
+      - pm_db
+    ports:
+      - "${PORT:-8081}:8081"
+    networks:
+      default:
+        aliases:
+          - backend
+
+  pm_frontend:
+    build:
+      context: ..
+      dockerfile: installation/frontend.Dockerfile
+    container_name: pm_frontend
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - pm_backend
+
+volumes:
+  postgres_data:

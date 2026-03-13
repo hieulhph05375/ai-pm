@@ -1,0 +1,5 @@
+-- 000002_add_login_lock.up.sql
+
+ALTER TABLE users 
+ADD COLUMN IF NOT EXISTS failed_login_attempts INTEGER DEFAULT 0,
+ADD COLUMN IF NOT EXISTS locked_until TIMESTAMP WITH TIME ZONE;

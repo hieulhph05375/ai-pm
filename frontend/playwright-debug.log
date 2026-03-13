@@ -1,0 +1,164 @@
+[1A[2K[WebServer] 2026/03/10 06:49:46 [CRON] Notification cron scheduler started
+[WebServer] 2026/03/10 06:49:46 [CRON] checkProjectDeadlines: placeholder (requires project repo)
+
+[1A[2K[WebServer] 2026/03/10 06:49:46 [CRON] checkStaleIssues: placeholder (requires issue repo)
+[WebServer] 2026/03/10 06:49:46 Server starting on port 8080
+
+[1A[2K[WebServer] {"ip":"127.0.0.1","latency":"78.833µs","level":"warning","method":"GET","msg":"request failed","path":"/api/v1/roles","query":"","status":401,"time":"2026-03-10T06:49:46+07:00","user_agent":""}
+
+
+Running 3 tests using 2 workers
+
+[1A[2K[1/3] [setup] › tests/e2e/auth.setup.ts:5:1 › authenticate
+[1A[2K[WebServer] {"ip":"::1","latency":"80.812875ms","level":"info","method":"POST","msg":"request handled","path":"/api/v1/auth/login","query":"","status":200,"time":"2026-03-10T06:49:50+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[WebServer] {"ip":"::1","latency":"2.291208ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/notifications/unread-count","query":"","status":200,"time":"2026-03-10T06:49:50+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[2/3] [chromium] › tests/e2e/wbs.spec.ts:44:5 › Work Breakdown Structure (WBS) › should allow editing a node
+[1A[2K[3/3] [chromium] › tests/e2e/wbs.spec.ts:19:5 › Work Breakdown Structure (WBS) › should display WBS tree and allow creating a node
+[1A[2K[WebServer] {"ip":"::1","latency":"1.288ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/notifications/unread-count","query":"","status":200,"time":"2026-03-10T06:49:52+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[WebServer] {"ip":"::1","latency":"10.437917ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/projects","query":"page=1\u0026limit=10\u0026search=\u0026status=","status":200,"time":"2026-03-10T06:49:52+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[WebServer] {"ip":"::1","latency":"1.008125ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/notifications/unread-count","query":"","status":200,"time":"2026-03-10T06:49:52+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[WebServer] {"ip":"::1","latency":"19.47775ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/projects","query":"page=1\u0026limit=10\u0026search=\u0026status=","status":200,"time":"2026-03-10T06:49:53+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[WebServer] {"ip":"::1","latency":"12.181542ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/projects/1","query":"","status":200,"time":"2026-03-10T06:49:53+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+[WebServer] 2026/03/10 06:49:53 [WBS Repo] ListTree project=1 (No filters)
+
+[1A[2K[WebServer] {"ip":"::1","latency":"23.361958ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/projects/1/pmi-stats","query":"","status":200,"time":"2026-03-10T06:49:53+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[WebServer] 2026/03/10 06:49:53 [WBS Repo] ListTree project=1 (No filters)
+
+[1A[2K[WebServer] {"ip":"::1","latency":"27.962917ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/projects/1/roles","query":"","status":200,"time":"2026-03-10T06:49:53+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[WebServer] {"ip":"::1","latency":"29.763042ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/projects/1","query":"","status":200,"time":"2026-03-10T06:49:53+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[WebServer] {"ip":"::1","latency":"29.42725ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/projects/1/roles","query":"","status":200,"time":"2026-03-10T06:49:53+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[WebServer] {"ip":"::1","latency":"22.3865ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/projects/1/pmi-stats","query":"","status":200,"time":"2026-03-10T06:49:53+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[WebServer] {"ip":"::1","latency":"31.614458ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/projects/1/members","query":"page=1\u0026limit=1000","status":200,"time":"2026-03-10T06:49:53+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[WebServer] {"ip":"::1","latency":"25.6ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/projects/1/members","query":"page=1\u0026limit=1000","status":200,"time":"2026-03-10T06:49:53+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[WebServer] {"ip":"::1","latency":"2.509708ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/users","query":"page=1\u0026limit=10","status":200,"time":"2026-03-10T06:49:53+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[WebServer] {"ip":"::1","latency":"2.944625ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/projects/1","query":"","status":200,"time":"2026-03-10T06:49:53+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[WebServer] {"ip":"::1","latency":"3.705458ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/holidays","query":"page=1\u0026limit=10","status":200,"time":"2026-03-10T06:49:53+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[WebServer] {"ip":"::1","latency":"3.39375ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/projects/1/wbs-baselines","query":"","status":200,"time":"2026-03-10T06:49:53+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[WebServer] {"ip":"::1","latency":"3.409833ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/projects/1/roles","query":"","status":200,"time":"2026-03-10T06:49:53+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[WebServer] {"ip":"::1","latency":"4.958958ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/projects/1/members","query":"page=1\u0026limit=1000","status":200,"time":"2026-03-10T06:49:53+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[WebServer] {"ip":"::1","latency":"639.583µs","level":"info","method":"GET","msg":"request handled","path":"/api/v1/settings","query":"","status":200,"time":"2026-03-10T06:49:53+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[WebServer] {"ip":"::1","latency":"1.284292ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/users","query":"page=1\u0026limit=10","status":200,"time":"2026-03-10T06:49:53+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[WebServer] {"ip":"::1","latency":"3.969083ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/projects/1","query":"","status":200,"time":"2026-03-10T06:49:53+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+[WebServer] {"ip":"::1","latency":"4.404ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/holidays","query":"page=1\u0026limit=10","status":200,"time":"2026-03-10T06:49:53+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[WebServer] {"ip":"::1","latency":"978.125µs","level":"info","method":"GET","msg":"request handled","path":"/api/v1/projects/1/wbs-baselines","query":"","status":200,"time":"2026-03-10T06:49:53+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[WebServer] {"ip":"::1","latency":"1.54475ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/projects/1/roles","query":"","status":200,"time":"2026-03-10T06:49:53+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[WebServer] {"ip":"::1","latency":"2.2835ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/projects/1/members","query":"page=1\u0026limit=1000","status":200,"time":"2026-03-10T06:49:53+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[WebServer] {"ip":"::1","latency":"778.334µs","level":"info","method":"GET","msg":"request handled","path":"/api/v1/settings","query":"","status":200,"time":"2026-03-10T06:49:53+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[WebServer] 2026/03/10 06:49:53 [WBS Handler] ListTree: project=1 search="" status="" assigned_to=""
+
+[1A[2K[WebServer] 2026/03/10 06:49:53 [WBS Repo] ListTree project=1 (No filters)
+
+[1A[2K[WebServer] {"ip":"::1","latency":"913.167µs","level":"info","method":"GET","msg":"request handled","path":"/api/v1/projects/1/wbs","query":"","status":200,"time":"2026-03-10T06:49:53+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[WebServer] {"ip":"::1","latency":"1.21075ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/projects/1/wbs/dependencies","query":"","status":200,"time":"2026-03-10T06:49:53+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[WebServer] 2026/03/10 06:49:53 [WBS Handler] ListTree: project=1 search="" status="" assigned_to=""
+
+[1A[2K[WebServer] 2026/03/10 06:49:53 [WBS Repo] ListTree project=1 (No filters)
+
+[1A[2K[WebServer] {"ip":"::1","latency":"542.042µs","level":"info","method":"GET","msg":"request handled","path":"/api/v1/projects/1/wbs/dependencies","query":"","status":200,"time":"2026-03-10T06:49:53+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[WebServer] {"ip":"::1","latency":"791.875µs","level":"info","method":"GET","msg":"request handled","path":"/api/v1/projects/1/wbs","query":"","status":200,"time":"2026-03-10T06:49:53+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[WebServer] {"ip":"::1","latency":"4.143ms","level":"info","method":"POST","msg":"request handled","path":"/api/v1/projects/1/wbs","query":"","status":201,"time":"2026-03-10T06:49:54+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[WebServer] 2026/03/10 06:49:54 [WBS Handler] ListTree: project=1 search="" status="" assigned_to=""
+
+[1A[2K[WebServer] 2026/03/10 06:49:54 [WBS Repo] ListTree project=1 (No filters)
+
+[1A[2K[WebServer] {"ip":"::1","latency":"1.03425ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/projects/1/wbs/dependencies","query":"","status":200,"time":"2026-03-10T06:49:54+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K[WebServer] {"ip":"::1","latency":"3.226708ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/projects/1/wbs","query":"","status":200,"time":"2026-03-10T06:49:54+07:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36"}
+
+[1A[2K  1) [chromium] › tests/e2e/wbs.spec.ts:19:5 › Work Breakdown Structure (WBS) › should display WBS tree and allow creating a node 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('text=E2E Integration Task')
+    Expected: visible
+    Error: strict mode violation: locator('text=E2E Integration Task') resolved to 3 elements:
+        1) <a href="/projects/1/wbs/3" class="font-semibold text-sm text-slate-900 hover:text-primary active:text-primary-dark transition-colors truncate decoration-primary/30 hover:underline underline-offset-4 s-8S6PJ4NyBQht">…</a> aka getByRole('link', { name: 'E2E Integration Task' }).first()
+        2) <a href="/projects/1/wbs/4" class="font-semibold text-sm text-slate-900 hover:text-primary active:text-primary-dark transition-colors truncate decoration-primary/30 hover:underline underline-offset-4 s-8S6PJ4NyBQht">…</a> aka getByRole('link', { name: 'E2E Integration Task' }).nth(1)
+        3) <a href="/projects/1/wbs/5" class="font-semibold text-sm text-slate-900 hover:text-primary active:text-primary-dark transition-colors truncate decoration-primary/30 hover:underline underline-offset-4 s-8S6PJ4NyBQht">…</a> aka getByRole('link', { name: 'E2E Integration Task' }).nth(2)
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=E2E Integration Task')[22m
+
+
+      39 |         // Verify toast or list update
+      40 |         await expect(page.locator('text=Added successfully')).toBeVisible();
+    > 41 |         await expect(page.locator('text=E2E Integration Task')).toBeVisible();
+         |                                                                 ^
+      42 |     });
+      43 |
+      44 |     test('should allow editing a node', async ({ page }) => {
+        at /Users/dongtd/Documents/Antigravity_Projects/Project Mgmt/frontend/tests/e2e/wbs.spec.ts:41:65
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/wbs-Work-Breakdown-Structu-9009f-e-and-allow-creating-a-node-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/wbs-Work-Breakdown-Structu-9009f-e-and-allow-creating-a-node-chromium/error-context.md
+
+
+[1A[2K  2) [chromium] › tests/e2e/wbs.spec.ts:44:5 › Work Breakdown Structure (WBS) › should allow editing a node 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('text=Updated successfully')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=Updated successfully')[22m
+
+
+      51 |         await page.click('button:has-text("Save Changes")');
+      52 |
+    > 53 |         await expect(page.locator('text=Updated successfully')).toBeVisible();
+         |                                                                 ^
+      54 |         await expect(page.locator('text=Phase 1 - Updated')).toBeVisible();
+      55 |     });
+      56 | });
+        at /Users/dongtd/Documents/Antigravity_Projects/Project Mgmt/frontend/tests/e2e/wbs.spec.ts:53:65
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/wbs-Work-Breakdown-Structure-WBS-should-allow-editing-a-node-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/wbs-Work-Breakdown-Structure-WBS-should-allow-editing-a-node-chromium/error-context.md
+
+
+[1A[2K  2 failed
+    [chromium] › tests/e2e/wbs.spec.ts:19:5 › Work Breakdown Structure (WBS) › should display WBS tree and allow creating a node 
+    [chromium] › tests/e2e/wbs.spec.ts:44:5 › Work Breakdown Structure (WBS) › should allow editing a node 
+  1 passed (13.9s)

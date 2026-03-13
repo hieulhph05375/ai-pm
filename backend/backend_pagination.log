@@ -1,0 +1,279 @@
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /api/v1/auth/login        --> project-mgmt/backend/internal/presentation/handler.(*AuthHandler).Login-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> project-mgmt/backend/internal/presentation/handler.(*AuthHandler).Register-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/refresh      --> project-mgmt/backend/internal/presentation/handler.(*AuthHandler).Refresh-fm (5 handlers)
+[GIN-debug] GET    /api/v1/users/me          --> project-mgmt/backend/internal/presentation/handler.(*UserHandler).GetMe-fm (6 handlers)
+[GIN-debug] GET    /api/v1/users             --> project-mgmt/backend/internal/presentation/handler.(*UserHandler).List-fm (7 handlers)
+[GIN-debug] POST   /api/v1/users             --> project-mgmt/backend/internal/presentation/handler.(*UserHandler).Create-fm (7 handlers)
+[GIN-debug] PUT    /api/v1/users/:id         --> project-mgmt/backend/internal/presentation/handler.(*UserHandler).Update-fm (7 handlers)
+[GIN-debug] PUT    /api/v1/users/:id/reset-password --> project-mgmt/backend/internal/presentation/handler.(*UserHandler).ResetPassword-fm (7 handlers)
+[GIN-debug] PUT    /api/v1/users/:id/toggle-status --> project-mgmt/backend/internal/presentation/handler.(*UserHandler).ToggleStatus-fm (7 handlers)
+[GIN-debug] GET    /api/v1/tasks             --> project-mgmt/backend/internal/presentation/handler.(*TaskHandler).List-fm (6 handlers)
+[GIN-debug] POST   /api/v1/tasks             --> project-mgmt/backend/internal/presentation/handler.(*TaskHandler).Create-fm (6 handlers)
+[GIN-debug] GET    /api/v1/tasks/:id         --> project-mgmt/backend/internal/presentation/handler.(*TaskHandler).GetByID-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/tasks/:id         --> project-mgmt/backend/internal/presentation/handler.(*TaskHandler).Update-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/tasks/:id         --> project-mgmt/backend/internal/presentation/handler.(*TaskHandler).Delete-fm (6 handlers)
+[GIN-debug] GET    /api/v1/tasks/:id/activities --> project-mgmt/backend/internal/presentation/handler.(*TaskHandler).ListActivities-fm (6 handlers)
+[GIN-debug] POST   /api/v1/tasks/:id/comments --> project-mgmt/backend/internal/presentation/handler.(*TaskHandler).AddComment-fm (6 handlers)
+[GIN-debug] GET    /api/v1/stakeholders      --> project-mgmt/backend/internal/presentation/handler.(*StakeholderHandler).List-fm (6 handlers)
+[GIN-debug] POST   /api/v1/stakeholders      --> project-mgmt/backend/internal/presentation/handler.(*StakeholderHandler).Create-fm (6 handlers)
+[GIN-debug] GET    /api/v1/stakeholders/:id  --> project-mgmt/backend/internal/presentation/handler.(*StakeholderHandler).GetByID-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/stakeholders/:id  --> project-mgmt/backend/internal/presentation/handler.(*StakeholderHandler).Update-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/stakeholders/:id  --> project-mgmt/backend/internal/presentation/handler.(*StakeholderHandler).Delete-fm (6 handlers)
+[GIN-debug] GET    /api/v1/settings          --> project-mgmt/backend/internal/presentation/handler.(*SettingHandler).GetAll-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/settings/:key     --> project-mgmt/backend/internal/presentation/handler.(*SettingHandler).Update-fm (6 handlers)
+[GIN-debug] GET    /api/v1/holidays          --> project-mgmt/backend/internal/presentation/handler.(*HolidayHandler).List-fm (6 handlers)
+[GIN-debug] POST   /api/v1/holidays          --> project-mgmt/backend/internal/presentation/handler.(*HolidayHandler).Create-fm (6 handlers)
+[GIN-debug] GET    /api/v1/holidays/:id      --> project-mgmt/backend/internal/presentation/handler.(*HolidayHandler).GetByID-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/holidays/:id      --> project-mgmt/backend/internal/presentation/handler.(*HolidayHandler).Update-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/holidays/:id      --> project-mgmt/backend/internal/presentation/handler.(*HolidayHandler).Delete-fm (6 handlers)
+[GIN-debug] GET    /api/v1/projects          --> project-mgmt/backend/internal/presentation/handler.(*ProjectHandler).List-fm (6 handlers)
+[GIN-debug] POST   /api/v1/projects          --> project-mgmt/backend/internal/presentation/handler.(*ProjectHandler).Create-fm (6 handlers)
+[GIN-debug] GET    /api/v1/projects/:id      --> project-mgmt/backend/internal/presentation/handler.(*ProjectHandler).GetByID-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/projects/:id      --> project-mgmt/backend/internal/presentation/handler.(*ProjectHandler).Update-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/projects/:id      --> project-mgmt/backend/internal/presentation/handler.(*ProjectHandler).Delete-fm (6 handlers)
+[GIN-debug] GET    /api/v1/projects/:id/stakeholders --> project-mgmt/backend/internal/presentation/handler.(*StakeholderHandler).ListByProject-fm (6 handlers)
+[GIN-debug] POST   /api/v1/projects/:id/stakeholders --> project-mgmt/backend/internal/presentation/handler.(*StakeholderHandler).AssignToProject-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/projects/:id/stakeholders/:sid --> project-mgmt/backend/internal/presentation/handler.(*StakeholderHandler).UnassignFromProject-fm (6 handlers)
+[GIN-debug] GET    /api/v1/projects/:id/wbs  --> project-mgmt/backend/internal/presentation/handler.(*WBSHandler).ListTree-fm (6 handlers)
+[GIN-debug] POST   /api/v1/projects/:id/wbs  --> project-mgmt/backend/internal/presentation/handler.(*WBSHandler).CreateNode-fm (6 handlers)
+[GIN-debug] GET    /api/v1/projects/:id/wbs/:nodeId --> project-mgmt/backend/internal/presentation/handler.(*WBSHandler).GetNode-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/projects/:id/wbs/:nodeId --> project-mgmt/backend/internal/presentation/handler.(*WBSHandler).UpdateNode-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/projects/:id/wbs/:nodeId --> project-mgmt/backend/internal/presentation/handler.(*WBSHandler).DeleteNode-fm (6 handlers)
+[GIN-debug] GET    /api/v1/projects/:id/wbs/dependencies --> project-mgmt/backend/internal/presentation/handler.(*WBSHandler).ListDependencies-fm (6 handlers)
+[GIN-debug] POST   /api/v1/projects/:id/wbs/dependencies --> project-mgmt/backend/internal/presentation/handler.(*WBSHandler).CreateDependency-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/projects/:id/wbs/dependencies/:depId --> project-mgmt/backend/internal/presentation/handler.(*WBSHandler).DeleteDependency-fm (6 handlers)
+[GIN-debug] GET    /api/v1/projects/:id/wbs/:nodeId/comments --> project-mgmt/backend/internal/presentation/handler.(*WBSHandler).ListComments-fm (6 handlers)
+[GIN-debug] POST   /api/v1/projects/:id/wbs/:nodeId/comments --> project-mgmt/backend/internal/presentation/handler.(*WBSHandler).AddComment-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/projects/:id/wbs/:nodeId/comments/:commentId --> project-mgmt/backend/internal/presentation/handler.(*WBSHandler).UpdateComment-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/projects/:id/wbs/:nodeId/comments/:commentId --> project-mgmt/backend/internal/presentation/handler.(*WBSHandler).DeleteComment-fm (6 handlers)
+[GIN-debug] GET    /api/v1/projects/:id/wbs-baselines --> project-mgmt/backend/internal/presentation/handler.(*WBSHandler).ListBaselines-fm (6 handlers)
+[GIN-debug] POST   /api/v1/projects/:id/wbs-baselines --> project-mgmt/backend/internal/presentation/handler.(*WBSHandler).CreateBaseline-fm (6 handlers)
+[GIN-debug] GET    /api/v1/projects/:id/wbs-baselines/:baselineId/nodes --> project-mgmt/backend/internal/presentation/handler.(*WBSHandler).GetBaselineNodes-fm (6 handlers)
+2026/03/07 08:00:21 Server starting on port 8080
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://github.com/gin-gonic/gin/blob/master/docs/doc.md#dont-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080
+{"ip":"::1","latency":"96.57625ms","level":"info","method":"POST","msg":"request handled","path":"/api/v1/auth/login","query":"","status":200,"time":"2026-03-07T08:01:38+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:01:38 | 200 |  96.93ms |             ::1 | POST     "/api/v1/auth/login"
+{"ip":"::1","latency":"6.719208ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T08:01:48+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:01:48 | 200 |   6.85ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.139083ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=2\u0026limit=10","status":200,"time":"2026-03-07T08:03:01+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:03:01 | 200 |   1.45ms |             ::1 | GET      "/api/v1/tasks?page=2&limit=10"
+{"ip":"::1","latency":"11.241416ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T08:14:05+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:14:05 | 200 |  11.61ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.574292ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=2\u0026limit=10","status":200,"time":"2026-03-07T08:14:23+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:14:23 | 200 |   1.71ms |             ::1 | GET      "/api/v1/tasks?page=2&limit=10"
+{"ip":"::1","latency":"1.430125ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=3\u0026limit=10","status":200,"time":"2026-03-07T08:14:25+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:14:25 | 200 |   1.52ms |             ::1 | GET      "/api/v1/tasks?page=3&limit=10"
+{"ip":"::1","latency":"1.812792ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=4\u0026limit=10","status":200,"time":"2026-03-07T08:14:29+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:14:29 | 200 |   1.93ms |             ::1 | GET      "/api/v1/tasks?page=4&limit=10"
+{"ip":"::1","latency":"1.692ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=5\u0026limit=10","status":200,"time":"2026-03-07T08:14:30+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:14:30 | 200 |   1.81ms |             ::1 | GET      "/api/v1/tasks?page=5&limit=10"
+{"ip":"::1","latency":"1.617833ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=6\u0026limit=10","status":200,"time":"2026-03-07T08:14:31+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:14:31 | 200 |   1.81ms |             ::1 | GET      "/api/v1/tasks?page=6&limit=10"
+{"ip":"::1","latency":"1.6715ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=5\u0026limit=10","status":200,"time":"2026-03-07T08:14:32+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:14:32 | 200 |   1.76ms |             ::1 | GET      "/api/v1/tasks?page=5&limit=10"
+{"ip":"::1","latency":"1.44975ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=4\u0026limit=10","status":200,"time":"2026-03-07T08:14:32+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:14:32 | 200 |   1.54ms |             ::1 | GET      "/api/v1/tasks?page=4&limit=10"
+{"ip":"::1","latency":"1.522542ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=3\u0026limit=10","status":200,"time":"2026-03-07T08:14:33+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:14:33 | 200 |    1.6ms |             ::1 | GET      "/api/v1/tasks?page=3&limit=10"
+{"ip":"::1","latency":"1.354083ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=2\u0026limit=10","status":200,"time":"2026-03-07T08:14:33+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:14:33 | 200 |   1.43ms |             ::1 | GET      "/api/v1/tasks?page=2&limit=10"
+{"ip":"::1","latency":"1.291417ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T08:14:33+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:14:33 | 200 |   1.37ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.917583ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=2\u0026limit=10","status":200,"time":"2026-03-07T08:14:35+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:14:35 | 200 |   2.05ms |             ::1 | GET      "/api/v1/tasks?page=2&limit=10"
+{"ip":"::1","latency":"1.364292ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=3\u0026limit=10","status":200,"time":"2026-03-07T08:14:35+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:14:35 | 200 |   1.83ms |             ::1 | GET      "/api/v1/tasks?page=3&limit=10"
+{"ip":"::1","latency":"1.648875ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=4\u0026limit=10","status":200,"time":"2026-03-07T08:14:35+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:14:35 | 200 |   1.75ms |             ::1 | GET      "/api/v1/tasks?page=4&limit=10"
+{"ip":"::1","latency":"1.378042ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=5\u0026limit=10","status":200,"time":"2026-03-07T08:14:36+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:14:36 | 200 |   1.46ms |             ::1 | GET      "/api/v1/tasks?page=5&limit=10"
+{"ip":"::1","latency":"147.459µs","level":"warning","method":"GET","msg":"request failed","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":401,"time":"2026-03-07T08:20:36+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:20:36 | 401 |   1.89ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"225.209µs","level":"warning","method":"GET","msg":"request failed","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":401,"time":"2026-03-07T08:20:42+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:20:42 | 401 | 378.125µs |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"117.726459ms","level":"info","method":"POST","msg":"request handled","path":"/api/v1/auth/login","query":"","status":200,"time":"2026-03-07T08:20:43+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:20:43 | 200 | 117.78ms |             ::1 | POST     "/api/v1/auth/login"
+{"ip":"::1","latency":"3.626666ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T08:20:43+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:20:43 | 200 |   3.67ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.292625ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T08:20:44+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:20:44 | 200 |   1.37ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.548333ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T08:24:37+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:24:37 | 200 |   2.04ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.172916ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T08:24:46+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:24:46 | 200 |   1.24ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.22275ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T08:24:47+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:24:47 | 200 |   1.29ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"19.584µs","level":"warning","method":"GET","msg":"request failed","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":401,"time":"2026-03-07T08:24:59+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:24:59 | 401 | 879.833µs |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.143833ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T08:25:06+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:25:06 | 200 |   1.19ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.976042ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T08:25:17+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:25:17 | 200 |   2.25ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"8.678542ms","level":"info","method":"PUT","msg":"request handled","path":"/api/v1/tasks/69","query":"","status":200,"time":"2026-03-07T08:25:27+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:25:27 | 200 |   8.75ms |             ::1 | PUT      "/api/v1/tasks/69"
+{"ip":"::1","latency":"1.311333ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=2\u0026limit=10","status":200,"time":"2026-03-07T08:25:42+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:25:42 | 200 |   1.36ms |             ::1 | GET      "/api/v1/tasks?page=2&limit=10"
+{"ip":"::1","latency":"11.586ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=3\u0026limit=10","status":200,"time":"2026-03-07T08:25:43+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:25:43 | 200 |  11.71ms |             ::1 | GET      "/api/v1/tasks?page=3&limit=10"
+{"ip":"::1","latency":"6.268291ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T08:26:49+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:26:49 | 200 |   6.67ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"82.638792ms","level":"warning","method":"POST","msg":"request failed","path":"/api/v1/auth/login","query":"","status":401,"time":"2026-03-07T08:27:50+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:27:50 | 401 |  82.91ms |             ::1 | POST     "/api/v1/auth/login"
+{"ip":"::1","latency":"1.032875ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T08:28:15+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:28:15 | 200 |   1.24ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.851083ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=2\u0026limit=10","status":200,"time":"2026-03-07T08:28:20+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:28:20 | 200 |   1.95ms |             ::1 | GET      "/api/v1/tasks?page=2&limit=10"
+{"ip":"::1","latency":"1.033625ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=3\u0026limit=10","status":200,"time":"2026-03-07T08:28:20+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:28:20 | 200 |   1.18ms |             ::1 | GET      "/api/v1/tasks?page=3&limit=10"
+{"ip":"::1","latency":"2.578667ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=2\u0026limit=10","status":200,"time":"2026-03-07T08:28:21+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:28:21 | 200 |   2.82ms |             ::1 | GET      "/api/v1/tasks?page=2&limit=10"
+{"ip":"::1","latency":"1.31125ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T08:28:21+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:28:21 | 200 |   1.51ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"16.447042ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T08:34:22+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 08:34:22 | 200 |  17.25ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"175.833µs","level":"warning","method":"GET","msg":"request failed","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":401,"time":"2026-03-07T09:08:27+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:08:27 | 401 | 500.375µs |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"121.682791ms","level":"info","method":"POST","msg":"request handled","path":"/api/v1/auth/login","query":"","status":200,"time":"2026-03-07T09:08:29+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:08:29 | 200 | 121.75ms |             ::1 | POST     "/api/v1/auth/login"
+{"ip":"::1","latency":"4.21825ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:08:29+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:08:29 | 200 |   4.32ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"973.875µs","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:09:13+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:09:13 | 200 |   1.22ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.183375ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:09:14+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:09:14 | 200 |   1.24ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.1825ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:09:14+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:09:14 | 200 |   1.25ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.179833ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:09:14+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:09:14 | 200 |   1.24ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.217041ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:09:14+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:09:14 | 200 |   1.29ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.253834ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:09:14+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:09:14 | 200 |   1.37ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.688292ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:09:15+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:09:15 | 200 |   1.77ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.178166ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:09:15+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:09:15 | 200 |   1.24ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.200125ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:09:15+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:09:15 | 200 |   1.26ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.130667ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:09:15+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:09:15 | 200 |   1.19ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.222834ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:09:15+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:09:15 | 200 |   1.28ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.696916ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/users","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:09:16+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:09:16 | 200 |   1.83ms |             ::1 | GET      "/api/v1/users?page=1&limit=10"
+{"ip":"::1","latency":"1.646417ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:09:17+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:09:17 | 200 |   1.69ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"3.140208ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/projects","query":"page=1\u0026limit=10\u0026search=\u0026status=","status":200,"time":"2026-03-07T09:09:18+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:09:18 | 200 |   3.24ms |             ::1 | GET      "/api/v1/projects?page=1&limit=10&search=&status="
+{"ip":"::1","latency":"1.80475ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/stakeholders","query":"page=1\u0026limit=10\u0026search=","status":200,"time":"2026-03-07T09:09:19+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:09:19 | 200 |   2.42ms |             ::1 | GET      "/api/v1/stakeholders?page=1&limit=10&search="
+{"ip":"::1","latency":"2.357625ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/settings","query":"","status":200,"time":"2026-03-07T09:09:19+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:09:19 | 200 |   2.45ms |             ::1 | GET      "/api/v1/settings"
+{"ip":"::1","latency":"11.356958ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/holidays","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:09:19+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:09:19 | 200 |  11.47ms |             ::1 | GET      "/api/v1/holidays?page=1&limit=10"
+{"ip":"::1","latency":"3.470291ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:09:20+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:09:20 | 200 |   3.57ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"2.745125ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/users","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:09:21+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:09:21 | 200 |   2.84ms |             ::1 | GET      "/api/v1/users?page=1&limit=10"
+{"ip":"::1","latency":"1.026791ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/users","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:09:23+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:09:23 | 200 |   1.09ms |             ::1 | GET      "/api/v1/users?page=1&limit=10"
+{"ip":"::1","latency":"967.709µs","level":"info","method":"GET","msg":"request handled","path":"/api/v1/users","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:09:40+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:09:40 | 200 |   1.24ms |             ::1 | GET      "/api/v1/users?page=1&limit=10"
+{"ip":"::1","latency":"906.25µs","level":"info","method":"GET","msg":"request handled","path":"/api/v1/users","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:09:41+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:09:41 | 200 | 979.625µs |             ::1 | GET      "/api/v1/users?page=1&limit=10"
+{"ip":"::1","latency":"930.709µs","level":"info","method":"GET","msg":"request handled","path":"/api/v1/users","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:09:41+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:09:41 | 200 |   1.01ms |             ::1 | GET      "/api/v1/users?page=1&limit=10"
+{"ip":"::1","latency":"924.541µs","level":"info","method":"GET","msg":"request handled","path":"/api/v1/users","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:09:41+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:09:41 | 200 |  995.5µs |             ::1 | GET      "/api/v1/users?page=1&limit=10"
+{"ip":"::1","latency":"717.792µs","level":"info","method":"GET","msg":"request handled","path":"/api/v1/users","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:10:00+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:10:00 | 200 | 748.875µs |             ::1 | GET      "/api/v1/users?page=1&limit=10"
+{"ip":"::1","latency":"1.014292ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/users","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:10:02+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:10:02 | 200 |   1.08ms |             ::1 | GET      "/api/v1/users?page=1&limit=10"
+{"ip":"::1","latency":"1.699917ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:10:03+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:10:03 | 200 |   1.81ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.029042ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:10:23+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:10:23 | 200 |   1.24ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"998.083µs","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:10:45+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:10:45 | 200 |   1.04ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"983.375µs","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:10:45+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:10:45 | 200 |   1.01ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"978.75µs","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:10:46+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:10:46 | 200 |   1.01ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.103666ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:10:47+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:10:47 | 200 |   1.14ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"931.459µs","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:10:47+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:10:47 | 200 |  960.5µs |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.193208ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:10:47+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:10:47 | 200 |   1.32ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"994.584µs","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:10:47+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:10:47 | 200 |   1.24ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"989.875µs","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:10:48+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:10:48 | 200 |   1.02ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.277417ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:10:48+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:10:48 | 200 |   1.35ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"8.244375ms","level":"info","method":"PUT","msg":"request handled","path":"/api/v1/tasks/68","query":"","status":200,"time":"2026-03-07T09:11:05+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:11:05 | 200 |   8.32ms |             ::1 | PUT      "/api/v1/tasks/68"
+{"ip":"::1","latency":"3.644208ms","level":"info","method":"PUT","msg":"request handled","path":"/api/v1/tasks/68","query":"","status":200,"time":"2026-03-07T09:11:09+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:11:09 | 200 |   3.89ms |             ::1 | PUT      "/api/v1/tasks/68"
+{"ip":"::1","latency":"1.045417ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:11:12+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:11:12 | 200 |   1.08ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"2.530917ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:11:33+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:11:33 | 200 |   2.84ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.189833ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:11:33+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:11:33 | 200 |   1.26ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.1355ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:11:33+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:11:33 | 200 |    1.2ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.142ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:11:33+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:11:33 | 200 |   1.25ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.163208ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:11:33+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:11:33 | 200 |   1.23ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.237125ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:11:33+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:11:33 | 200 |   1.31ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.134917ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:11:34+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:11:34 | 200 |    1.2ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.125042ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:11:34+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:11:34 | 200 |   1.19ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.121459ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:11:34+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:11:34 | 200 |   1.18ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"3.453667ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/users","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:11:38+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:11:38 | 200 |   3.51ms |             ::1 | GET      "/api/v1/users?page=1&limit=10"
+{"ip":"::1","latency":"730µs","level":"info","method":"GET","msg":"request handled","path":"/api/v1/users","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:11:38+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:11:38 | 200 | 770.833µs |             ::1 | GET      "/api/v1/users?page=1&limit=10"
+{"ip":"::1","latency":"1.2805ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:11:39+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:11:39 | 200 |   1.33ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.076ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:11:44+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:11:44 | 200 |   1.17ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"979.667µs","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:11:59+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:11:59 | 200 |   1.01ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.157209ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:12:15+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:12:15 | 200 |   1.43ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"935.958µs","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:12:15+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:12:15 | 200 | 964.125µs |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.12975ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:12:15+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:12:15 | 200 |   1.19ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.166667ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:12:15+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:12:15 | 200 |   1.23ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.165208ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:12:15+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:12:15 | 200 |   1.23ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.22925ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:12:15+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:12:15 | 200 |   1.25ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.185708ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:12:16+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:12:16 | 200 |   1.25ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"946.833µs","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:12:16+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:12:16 | 200 | 978.541µs |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.197084ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:12:16+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:12:16 | 200 |   1.34ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"1.0035ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:12:16+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:12:16 | 200 |   1.03ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"
+{"ip":"::1","latency":"84ns","level":"warning","method":"GET","msg":"request failed","path":"/api/v1/category-types","query":"","status":404,"time":"2026-03-07T09:12:21+07:00","user_agent":"curl/8.7.1"}
+[GIN] 2026/03/07 - 09:12:21 | 404 | 84.667µs |             ::1 | GET      "/api/v1/category-types"
+{"ip":"::1","latency":"1.184625ms","level":"info","method":"GET","msg":"request handled","path":"/api/v1/tasks","query":"page=1\u0026limit=10","status":200,"time":"2026-03-07T09:12:24+07:00","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+[GIN] 2026/03/07 - 09:12:24 | 200 |   1.82ms |             ::1 | GET      "/api/v1/tasks?page=1&limit=10"

@@ -1,0 +1,3 @@
+2026/03/09 21:53:59 Failed to seed database: failed to link role pmo to permission portfolio:read: pq: insert or update on table "role_permissions" violates foreign key constraint "role_permissions_permission_id_fkey" (23503)
+FAIL	project-mgmt/backend/tests	0.791s
+FAIL

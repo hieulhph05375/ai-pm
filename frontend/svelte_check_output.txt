@@ -1,0 +1,105 @@
+Loading svelte-check in workspace: /Users/dongtd/Documents/Antigravity_Projects/Project Mgmt/frontend
+Getting Svelte diagnostics...
+
+/Users/dongtd/Documents/Antigravity_Projects/Project Mgmt/frontend/src/lib/components/categories/CategoryModal.svelte:177:21
+Warn: A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control (svelte)
+                <div role="group" aria-labelledby="color-label">
+                    <label
+                        id="color-label"
+                        class="block text-xs font-bold text-slate-500 uppercase mb-2 ml-1"
+                        >Color</label
+                    >
+                    <div class="flex flex-wrap gap-2 px-1">
+
+/Users/dongtd/Documents/Antigravity_Projects/Project Mgmt/frontend/src/lib/components/categories/CategoryModal.svelte:199:21
+Warn: A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control (svelte)
+                <div role="group" aria-labelledby="icon-label">
+                    <label
+                        id="icon-label"
+                        class="block text-xs font-bold text-slate-500 uppercase mb-2 ml-1"
+                        >Icon</label
+                    >
+                    <div class="flex flex-wrap gap-2 px-1">
+
+/Users/dongtd/Documents/Antigravity_Projects/Project Mgmt/frontend/src/lib/components/timesheets/TimeEntryModal.svelte:90:13
+Error: Type '{ data: WBSNode[]; total: number; }' is missing the following properties from type 'WBSNode[]': length, pop, push, concat, and 35 more. (ts)
+            // Only load leaves or all nodes to select from for time logging
+            wbsNodes = await wbsService.listTree(projectId);
+            // Flatten tree for dropdown
+
+/Users/dongtd/Documents/Antigravity_Projects/Project Mgmt/frontend/src/routes/(app)/users/+page.svelte:434:5
+Warn: Visible, non-interactive elements with a click event must be accompanied by a keyboard event handler. Consider whether an interactive element such as `<button type="button">` or `<a>` might be more appropriate
+https://svelte.dev/e/a11y_click_events_have_key_events (svelte)
+			{#if $authStore.user?.isAdmin}
+				<div
+					class="flex items-center gap-3 p-4 bg-slate-50 rounded-2xl border border-slate-100 hover:border-primary/20 transition-all cursor-pointer"
+					onclick={() =>
+						(currentUser.is_admin = !currentUser.is_admin)}
+				>
+					<div class="flex-1">
+						<p
+							class="text-sm font-bold text-slate-900 leading-tight"
+						>
+							System Administrator
+						</p>
+						<p
+							class="text-[11px] text-slate-400 font-medium mt-0.5"
+						>
+							Allow user to bypass all permission barriers
+						</p>
+					</div>
+					<div
+						class="size-6 bg-white border-2 {currentUser.is_admin
+							? 'border-primary bg-primary/10'
+							: 'border-slate-300'} rounded-lg flex items-center justify-center transition-all"
+					>
+						{#if currentUser.is_admin}
+							<span
+								class="material-symbols-outlined text-primary text-lg font-bold"
+								>check</span
+							>
+						{/if}
+					</div>
+				</div>
+			{/if}
+
+/Users/dongtd/Documents/Antigravity_Projects/Project Mgmt/frontend/src/routes/(app)/users/+page.svelte:434:5
+Warn: `<div>` with a click handler must have an ARIA role
+https://svelte.dev/e/a11y_no_static_element_interactions (svelte)
+			{#if $authStore.user?.isAdmin}
+				<div
+					class="flex items-center gap-3 p-4 bg-slate-50 rounded-2xl border border-slate-100 hover:border-primary/20 transition-all cursor-pointer"
+					onclick={() =>
+						(currentUser.is_admin = !currentUser.is_admin)}
+				>
+					<div class="flex-1">
+						<p
+							class="text-sm font-bold text-slate-900 leading-tight"
+						>
+							System Administrator
+						</p>
+						<p
+							class="text-[11px] text-slate-400 font-medium mt-0.5"
+						>
+							Allow user to bypass all permission barriers
+						</p>
+					</div>
+					<div
+						class="size-6 bg-white border-2 {currentUser.is_admin
+							? 'border-primary bg-primary/10'
+							: 'border-slate-300'} rounded-lg flex items-center justify-center transition-all"
+					>
+						{#if currentUser.is_admin}
+							<span
+								class="material-symbols-outlined text-primary text-lg font-bold"
+								>check</span
+							>
+						{/if}
+					</div>
+				</div>
+			{/if}
+
+====================================
+svelte-check found 1 error and 4 warnings in 3 files

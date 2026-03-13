@@ -1,0 +1,8 @@
+include:
+  - 'https://ci_git.mcredit.com.vn/api/v4/projects/1404/repository/files/project-ci%2Fgitlab-ci-golang.yaml/raw?ref=main&private_token=${CICD_TEMPLATE_ACCESS_TOKEN}&.yaml'
+
+variables:
+  gitOps_Url: ci_git.mcredit.com.vn/chart/supper-app/afs-gitops.git
+  gitOps_Path: afs-gitops/helm
+  SERVICE: pm-ai-service
+  REPO_URL: 285484073914.dkr.ecr.ap-southeast-1.amazonaws.com/dev-pm-ai-service

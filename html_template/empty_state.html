@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AIVOVAN_2026 Empty State Dashboard</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Outfit:wght@600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1337ec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101322",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "header": ["Outfit", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .airy-white-glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(226, 232, 240, 0.6);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .pagination-glass {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(226, 232, 240, 0.5);
+        }
+        .footer-glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(16px);
+            border-top: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .active-view-gradient {
+            background: linear-gradient(135deg, #6366f1 0%, #38bdf8 100%);
+        }
+        .illustration-glass {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 100%);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+    <div class="flex h-screen overflow-hidden">
+        <aside class="w-64 glass-panel border-r border-slate-200/50 flex flex-col z-20">
+            <div class="p-6">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="size-10 bg-primary rounded-lg flex items-center justify-center text-white">
+                        <span class="material-symbols-outlined">rocket_launch</span>
+                    </div>
+                    <h1 class="font-header text-xl tracking-tight">AIVOVAN</h1>
+                </div>
+                <nav class="space-y-2">
+                    <a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-100 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px]">dashboard</span>
+                        <span class="text-sm font-medium text-slate-600">Overview</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-100 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px]">check_circle</span>
+                        <span class="text-sm font-medium text-slate-600">My Tasks</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary/10 text-primary font-semibold"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px]">bar_chart_4_bars</span>
+                        <span class="text-sm">Gantt Chart</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-100 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px]">group</span>
+                        <span class="text-sm font-medium text-slate-600">Team</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-100 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px]">settings</span>
+                        <span class="text-sm font-medium text-slate-600">Settings</span>
+                    </a>
+                </nav>
+            </div>
+        </aside>
+        <main class="flex-1 flex flex-col overflow-hidden relative">
+            <header class="h-20 glass-panel flex items-center justify-between px-8 z-10">
+                <div class="flex items-center gap-6">
+                    <h2 class="font-header text-2xl">Project Timeline</h2>
+                    <div class="relative">
+                        <span
+                            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+                        <input
+                            class="pl-10 pr-4 py-2 bg-slate-100/50 border-none rounded-xl w-64 focus:ring-2 focus:ring-primary/20 text-sm"
+                            placeholder="Search tasks..." type="text" />
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button
+                        class="bg-primary text-white px-6 py-2.5 rounded-xl font-bold text-sm flex items-center gap-2 hover:opacity-90 transition-opacity">
+                        <span class="material-symbols-outlined text-lg">add</span>
+                        New Task
+                    </button>
+                    <div class="size-10 rounded-full border-2 border-primary/20 p-0.5">
+                        <img alt="User profile" class="rounded-full w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ7k7-F2V-A633lMeIYyjepEZOMvZOzY5pxRY3CgpiW8T7Mae8SPWu-e0_jxr_lgKmjY8N7YW1B1TKisBTsI-GUuRKr1a0d-K9cg8OHDTbsKZlWk_g3O_3KH_by5EQrdv21lMi3gSBizoXtjDP2D5L_ngWmvS6mclPhbLiYC9d-gQoq17X2DJ-nBGMOGXgtm4lmLB8o1Yl93bN34clL6_W6kTGCAAeX17AMIW7G87CmseP2iBHRO7N10owbaTsv9aSmJ39YIEuB7aS" />
+                    </div>
+                </div>
+            </header>
+            <div
+                class="h-14 bg-white/40 border-b border-slate-200/50 px-8 flex items-center gap-6 z-10 backdrop-blur-sm">
+                <div class="flex items-center gap-2">
+                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Filter &amp;
+                        View</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="airy-white-glass p-1 rounded-xl flex items-center gap-0.5">
+                        <button
+                            class="px-3 py-1.5 text-xs font-semibold rounded-lg flex items-center gap-2 hover:bg-white/50 transition-colors text-slate-600">
+                            <span class="material-symbols-outlined text-[16px]">calendar_view_day</span>
+                            Day
+                        </button>
+                        <button
+                            class="px-3 py-1.5 text-xs font-semibold rounded-lg flex items-center gap-2 active-view-gradient text-white shadow-sm">
+                            <span class="material-symbols-outlined text-[16px]">grid_view</span>
+                            Week
+                        </button>
+                        <button
+                            class="px-3 py-1.5 text-xs font-semibold rounded-lg flex items-center gap-2 hover:bg-white/50 transition-colors text-slate-600">
+                            <span class="material-symbols-outlined text-[16px]">calendar_month</span>
+                            Month
+                        </button>
+                        <button
+                            class="px-3 py-1.5 text-xs font-semibold rounded-lg flex items-center gap-2 hover:bg-white/50 transition-colors text-slate-600">
+                            <span class="material-symbols-outlined text-[16px]">calendar_view_week</span>
+                            Quarter
+                        </button>
+                    </div>
+                    <div class="h-6 w-px bg-slate-200/60 mx-1"></div>
+                    <div class="relative group">
+                        <button
+                            class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-slate-200 bg-white text-xs font-medium text-slate-600 hover:border-primary/50 transition-all">
+                            <span class="material-symbols-outlined text-sm">person</span>
+                            PIC: All Members
+                            <span class="material-symbols-outlined text-sm">expand_more</span>
+                        </button>
+                    </div>
+                    <div class="relative group">
+                        <button
+                            class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-slate-200 bg-white text-xs font-medium text-slate-600 hover:border-primary/50 transition-all">
+                            <span class="material-symbols-outlined text-sm">filter_list</span>
+                            Status: All
+                            <span class="material-symbols-outlined text-sm">expand_more</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="ml-auto flex items-center gap-3">
+                    <button class="text-xs font-medium text-primary hover:underline">Clear Filters</button>
+                    <div class="h-4 w-px bg-slate-200"></div>
+                    <button class="p-1.5 rounded-lg hover:bg-slate-100 text-slate-400">
+                        <span class="material-symbols-outlined text-lg">fullscreen</span>
+                    </button>
+                </div>
+            </div>
+            <div class="flex-1 flex flex-col items-center justify-center p-8 bg-white/30">
+                <div class="flex flex-col items-center text-center max-w-md">
+                    <div class="relative mb-8">
+                        <div
+                            class="size-32 illustration-glass rounded-3xl flex items-center justify-center rotate-6 translate-x-4 opacity-40">
+                        </div>
+                        <div
+                            class="size-32 illustration-glass rounded-3xl absolute inset-0 flex items-center justify-center -rotate-3 bg-white/60">
+                            <div
+                                class="size-20 rounded-2xl bg-gradient-to-br from-indigo-500/10 to-sky-400/10 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-5xl text-indigo-500/60">assignment</span>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute -bottom-2 -right-2 size-10 rounded-full bg-white shadow-xl flex items-center justify-center">
+                            <span class="material-symbols-outlined text-indigo-500 text-xl font-bold">add</span>
+                        </div>
+                    </div>
+                    <h3 class="font-header text-2xl text-slate-800 mb-3">Không có nhiệm vụ nào</h3>
+                    <p class="font-display text-slate-500 text-sm leading-relaxed mb-8">
+                        Bắt đầu bằng cách thêm nhiệm vụ mới cho dự án của bạn.
+                    </p>
+                    <button
+                        class="active-view-gradient text-white px-8 py-3.5 rounded-xl font-bold text-sm flex items-center gap-2 shadow-lg shadow-indigo-500/25 hover:opacity-95 transition-all transform hover:-translate-y-0.5">
+                        <span class="material-symbols-outlined">add_task</span>
+                        Thêm nhiệm vụ mới
+                    </button>
+                </div>
+            </div>
+            <footer
+                class="absolute bottom-0 left-0 right-0 h-16 footer-glass z-30 flex items-center justify-between px-8">
+                <div class="flex items-center gap-3">
+                    <span class="text-xs font-medium text-slate-500">Rows per page:</span>
+                    <div class="relative group">
+                        <select
+                            class="appearance-none bg-white/50 border border-slate-200/60 rounded-lg px-3 py-1.5 pr-8 text-xs font-semibold text-slate-400 focus:outline-none cursor-not-allowed"
+                            disabled="">
+                            <option>10</option>
+                        </select>
+                        <span
+                            class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-slate-300 pointer-events-none text-sm">expand_more</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-1.5 opacity-50 pointer-events-none">
+                    <button class="size-9 flex items-center justify-center rounded-xl pagination-glass text-slate-400">
+                        <span class="material-symbols-outlined text-xl">chevron_left</span>
+                    </button>
+                    <div class="flex items-center gap-1.5">
+                        <button
+                            class="size-9 flex items-center justify-center rounded-xl active-view-gradient text-white text-xs font-bold shadow-lg shadow-indigo-500/20">0</button>
+                    </div>
+                    <button class="size-9 flex items-center justify-center rounded-xl pagination-glass text-slate-400">
+                        <span class="material-symbols-outlined text-xl">chevron_right</span>
+                    </button>
+                </div>
+                <div class="text-xs font-medium text-slate-500">
+                    Showing <span class="text-slate-900 font-semibold">0-0</span> of <span
+                        class="text-slate-900 font-semibold">0</span> tasks
+                </div>
+            </footer>
+        </main>
+    </div>
+    <div
+        class="lg:hidden fixed inset-0 bg-background-dark/95 z-50 flex flex-col items-center justify-center p-8 text-center">
+        <span class="material-symbols-outlined text-6xl text-primary mb-4">desktop_windows</span>
+        <h2 class="text-2xl font-bold mb-2">Desktop Only View</h2>
+        <p class="text-slate-400 text-sm">AIVOVAN_2026 is optimized for 1440px+ widescreen displays to ensure maximum
+            productivity.</p>
+    </div>
+
+</body>
+
+</html>

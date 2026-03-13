@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AIVOVAN_2026 Desktop Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1337ec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101322",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "outfit": ["Outfit", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1337ec 0%, #38bdf8 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased h-screen overflow-hidden">
+<div class="flex h-full w-full">
+<!-- Left Side: Abstract Branding Illustration -->
+<div class="hidden lg:flex lg:w-1/2 relative overflow-hidden gradient-bg items-center justify-center p-20">
+<div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+<div class="relative z-10 text-white space-y-8 max-w-lg">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-white/20 backdrop-blur-md rounded-lg flex items-center justify-center border border-white/30">
+<span class="material-symbols-outlined text-white text-2xl">rocket_launch</span>
+</div>
+<span class="text-2xl font-outfit font-extrabold tracking-tight">AIVOVAN_2026</span>
+</div>
+<div class="space-y-4">
+<h1 class="text-5xl font-outfit font-extrabold leading-tight">Orchestrate your SaaS ecosystem.</h1>
+<p class="text-white/80 text-lg leading-relaxed">The next generation of high-end project management. Secure, scalable, and beautifully designed for peak performance.</p>
+</div>
+<div class="flex gap-4 pt-4">
+<div class="h-1 w-12 bg-white rounded-full"></div>
+<div class="h-1 w-4 bg-white/30 rounded-full"></div>
+<div class="h-1 w-4 bg-white/30 rounded-full"></div>
+</div>
+</div>
+<!-- Decorative Shapes -->
+<div class="absolute -bottom-20 -left-20 size-80 bg-white/10 rounded-full blur-3xl"></div>
+<div class="absolute -top-20 -right-20 size-96 bg-sky-400/20 rounded-full blur-3xl"></div>
+</div>
+<!-- Right Side: Login Form -->
+<div class="w-full lg:w-1/2 flex items-center justify-center p-6 sm:p-12 relative bg-slate-50 dark:bg-background-dark">
+<!-- Background Image Pattern for Depth -->
+<div class="absolute inset-0 opacity-[0.03] pointer-events-none" data-alt="Subtle geometric mesh pattern background" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDT6fAxJHXhrg3sNRcuiu2tLT--IOZKflLdDgaK7TQFhkwgXrDSjVKYzpr8dxnqrJqRboeX8VUFd1oCX254CYKx0enuZtT3zKNAZ4iNXwQ58-ervzYZVrzCjWCaeTpBuj9KF3ogCWRo2Qf2gTqiuPeeaQjTJZvOh7VC37VXxr8OCiuZgiBz7SoXDBSUeRrSsV53-N2ieyGxvoKyV64N3iyVEPdmL0EVbUqlV5l9qlO8feve_EfB4QZk87ygH-IEzn9fk9_IjHahyX49');"></div>
+<div class="glass-card w-full max-w-[480px] p-10 rounded-xl shadow-2xl space-y-8 relative z-10">
+<div class="space-y-2 text-center lg:text-left">
+<h2 class="text-3xl font-outfit font-extrabold text-slate-900 dark:text-white">Welcome Back</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Please enter your credentials to access your workspace.</p>
+</div>
+<div class="space-y-4">
+<!-- Email Field -->
+<div class="space-y-1.5">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300 ml-1">Email Address</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">mail</span>
+<input class="w-full pl-10 pr-4 py-3.5 bg-white/50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition-all text-slate-900 dark:text-white placeholder:text-slate-400" placeholder="name@company.com" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-center px-1">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Password</label>
+<a class="text-xs font-bold text-primary hover:underline" href="#">Forgot Password?</a>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">lock</span>
+<input class="w-full pl-10 pr-12 py-3.5 bg-white/50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition-all text-slate-900 dark:text-white placeholder:text-slate-400" placeholder="••••••••" type="password"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</button>
+</div>
+</div>
+</div>
+<button class="w-full gradient-bg text-white font-bold py-4 rounded-lg shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:opacity-95 transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+<span>Sign In</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+<div class="relative flex items-center py-2">
+<div class="flex-grow border-t border-slate-200 dark:border-slate-700"></div>
+<span class="flex-shrink mx-4 text-xs font-semibold text-slate-400 uppercase tracking-widest">Or continue with</span>
+<div class="flex-grow border-t border-slate-200 dark:border-slate-700"></div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-2 py-3 px-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
+<img alt="Google Logo" class="size-5" data-alt="Google colorful G icon logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfZhR5DTGWBdlZNalKNo4ln1SoMLnJqMfhE77O-N1_ELy5YK3jzVWHMk99j--ir4ptI66FXI_LWdhN0c4MgVSQXKgkNZQNKSSIcjjMwxy8HiL0zLrUVdCcCwHGsKoJLxTigqOEQG6yVareVS2h1gYg179R29RA0ha897HHZOHLCrnK8D8vjFe-C4BshBzhYjLJlnY2eZYIXOh5dtK3Zo1BFR4ggQHFDklDwsqUZ5WltEA_Cy_s8JA0P8TvrY2BQt636uGESWTmcKGO"/>
+<span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Google</span>
+</button>
+<button class="flex items-center justify-center gap-2 py-3 px-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
+<img alt="Microsoft Logo" class="size-5" data-alt="Microsoft 4-color square logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkjb82Jtkb-ebCigUSHEoPc0i0fnaSTOucxlWZgLSlweANjkP09Hs2GBnR1XFCLWw7iO4a6tZZUxwEq71gokA-QWCtMRhlo4n2r8xw8IkGBJKF9BJIZ1VCLyb7QFTCleS8iZlurV00HmZkf93fe6ww-kzIHcVkWKcse4M-mJLYMO173x3BK8Ih705mT4gb6LbqHMjyeSTtY6cPWDWqSrqq6AEqJqy0CJP-Nq7QtfYq9G-zQmgfBPJkRpEMIEAY40YueCQjKB7vi-Sd"/>
+<span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Microsoft</span>
+</button>
+</div>
+<p class="text-center text-sm text-slate-500 dark:text-slate-400">
+                    Don't have an account? 
+                    <a class="text-primary font-bold hover:underline" href="#">Sign up for free</a>
+</p>
+</div>
+<!-- Footer Links -->
+<div class="absolute bottom-8 text-xs text-slate-400 flex gap-6">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Support</a>
+</div>
+</div>
+</div>
+</body></html>

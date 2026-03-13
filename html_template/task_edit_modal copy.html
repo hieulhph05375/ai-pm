@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AIVOVAN_2026 - Task Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1337ec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101322",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "title": ["Outfit", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 overflow-hidden">
+<div class="relative flex min-h-screen w-full flex-col filter blur-md">
+<header class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-10 py-3">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-primary">
+<span class="material-symbols-outlined text-3xl">rocket_launch</span>
+<h2 class="text-slate-900 dark:text-white text-lg font-title font-bold tracking-tight">AIVOVAN_2026</h2>
+</div>
+<nav class="flex items-center gap-9">
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-primary text-sm font-semibold border-b-2 border-primary pb-1" href="#">Tasks</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">Teams</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">Reports</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-8 items-center">
+<div class="flex bg-slate-100 dark:bg-slate-800 rounded-xl px-4 py-2 w-64 items-center gap-2">
+<span class="material-symbols-outlined text-slate-400">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full" placeholder="Search tasks..." type="text"/>
+</div>
+<div class="flex gap-4">
+<button class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="h-10 w-10 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center overflow-hidden" data-alt="User profile avatar circle">
+<img alt="Avatar" data-alt="Professional user avatar headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCIRA-sLbOn7E6i_D7uAzyIuH8c_kIKUa_1HcabgAHtNhwP_PO21LbkB45lxvxhUPIoESaum8FzPCXrWm5XcjBOYCCnkrFEUDnbuSKpsAlnQvOWugE1Tzt3DMofi_lziRDcJRQn3SEfDvq1OJ5JUm3g4JWrshS1avk_F02IMINEmz7DI7aWmStZThEFqm47zRcaN7CcuwQ_S_4CLKTpkoDlzGhjiaH6rKd6jhG1WvsS6Cfwg4UGYeoNzO249U0TOXnOAuNY1scR90r"/>
+</div>
+</div>
+</div>
+</header>
+<main class="p-8 max-w-7xl mx-auto w-full">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h1 class="text-4xl font-title font-bold text-slate-900 dark:text-white">Task Management</h1>
+<p class="text-slate-500 mt-2">Oversee and track your team's operational flow.</p>
+</div>
+<button class="bg-primary text-white px-6 py-2.5 rounded-xl font-bold flex items-center gap-2">
+<span class="material-symbols-outlined">add</span> New Task
+                </button>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-slate-50 dark:bg-slate-800/50 border-b border-slate-200 dark:border-slate-800">
+<th class="px-6 py-4 text-sm font-semibold text-slate-600 dark:text-slate-400">Task Name</th>
+<th class="px-6 py-4 text-sm font-semibold text-slate-600 dark:text-slate-400">Status</th>
+<th class="px-6 py-4 text-sm font-semibold text-slate-600 dark:text-slate-400">Department</th>
+<th class="px-6 py-4 text-sm font-semibold text-slate-600 dark:text-slate-400">Assignee</th>
+<th class="px-6 py-4 text-sm font-semibold text-slate-600 dark:text-slate-400 text-right">Due Date</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<tr>
+<td class="px-6 py-5 font-medium">Quarterly Financial Audit</td>
+<td class="px-6 py-5"><span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-xs font-bold uppercase">In Progress</span></td>
+<td class="px-6 py-5 text-slate-500">Finance</td>
+<td class="px-6 py-5"><div class="w-8 h-8 rounded-full bg-slate-200" data-alt="Assignee 1 profile photo"></div></td>
+<td class="px-6 py-5 text-right text-slate-500">Oct 24, 2026</td>
+</tr>
+<tr>
+<td class="px-6 py-5 font-medium">System Migration phase 1</td>
+<td class="px-6 py-5"><span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-bold uppercase">Pending</span></td>
+<td class="px-6 py-5 text-slate-500">Infrastructure</td>
+<td class="px-6 py-5"><div class="w-8 h-8 rounded-full bg-slate-200" data-alt="Assignee 2 profile photo"></div></td>
+<td class="px-6 py-5 text-right text-slate-500">Oct 28, 2026</td>
+</tr>
+</tbody>
+</table>
+</div>
+</main>
+</div>
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-sm">
+<div class="bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl w-full max-w-2xl rounded-2xl shadow-2xl border border-white/20 dark:border-slate-700/30 overflow-hidden">
+<div class="px-8 pt-8 pb-4 flex justify-between items-center">
+<h2 class="text-3xl font-title font-bold text-slate-900 dark:text-white">Edit Task</h2>
+<button class="text-slate-400 hover:text-slate-600 transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<form class="px-8 pb-8 space-y-6">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 ml-1">Task Name</label>
+<input class="w-full bg-slate-50 dark:bg-slate-800/50 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-slate-900 dark:text-white font-medium" type="text" value="Quarterly Financial Audit"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 ml-1">Description</label>
+<textarea class="w-full bg-slate-50 dark:bg-slate-800/50 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-slate-900 dark:text-white" rows="3">Reviewing all internal financial operations for Q3 2026 to ensure compliance with the new international standards.</textarea>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 ml-1">Department</label>
+<select class="w-full bg-slate-50 dark:bg-slate-800/50 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-slate-900 dark:text-white">
+<option>Finance</option>
+<option>Marketing</option>
+<option>Operations</option>
+<option>Infrastructure</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 ml-1">Status</label>
+<div class="relative">
+<select class="w-full bg-slate-50 dark:bg-slate-800/50 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-slate-900 dark:text-white appearance-none">
+<option>In Progress</option>
+<option>Pending</option>
+<option>Completed</option>
+<option>Urgent</option>
+</select>
+</div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 ml-1">Assignee</label>
+<div class="flex flex-wrap gap-2 items-center bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl p-2 min-h-[56px]">
+<div class="flex items-center gap-2 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-full px-2 py-1 shadow-sm">
+<div class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden" data-alt="Small assignee avatar">
+<img alt="Assignee" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6ecE4G0TKlQxkDHej_pifdLu6yaGYJbrIKLOHFCCSkTyUsJYIhPJgXdEBbX0ntEzrHsqKjXVEX8kolgwl19Lrh6RcFqr_inGhouIIJCkkog0R4NveDi_zsSeyVlXfR7E_zMBpXGe8jN6N6wyrSbCiNdo22Y5zTXqo-gRW3OpmMnHX_aL1NNpgLQprcgXfCCPtoPILbiAgcF6OxWl6UceAZbnz4gZS2CfCpWT7lBFXdWCYKzQFuLLQvLeweixsbgr30cI-xkEG1-ud"/>
+</div>
+<span class="text-sm font-medium">Sarah Jenkins</span>
+<button class="material-symbols-outlined text-xs text-slate-400 hover:text-red-500">close</button>
+</div>
+<button class="flex items-center gap-1 text-primary text-sm font-bold px-3 py-1 hover:bg-primary/5 rounded-full transition-colors">
+<span class="material-symbols-outlined text-sm">person_add</span> Add Assignee
+                        </button>
+</div>
+</div>
+<div class="flex gap-4 pt-4">
+<button class="flex-1 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold py-3.5 rounded-xl transition-all border border-slate-200 dark:border-slate-700" type="button">
+                        Cancel
+                    </button>
+<button class="flex-[2] bg-gradient-to-r from-primary to-[#4f46e5] hover:opacity-90 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-primary/20 transition-all" type="submit">
+                        Update Task
+                    </button>
+</div>
+</form>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,18 @@
+{
+  "cookies": [],
+  "origins": [
+    {
+      "origin": "http://localhost:5173",
+      "localStorage": [
+        {
+          "name": "user",
+          "value": "{\"email\":\"admin@example.com\",\"fullName\":\"admin User\",\"id\":4,\"isAdmin\":true}"
+        },
+        {
+          "name": "at",
+          "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6dHJ1ZSwiZXhwIjoxNzczMTAxNjU0LCJpYXQiOjE3NzMxMDA3NTQsInBlcm1zIjpbInVzZXI6cmVhZCIsInVzZXI6Y3JlYXRlIiwidXNlcjp1cGRhdGUiLCJ1c2VyOmRlbGV0ZSIsInJvbGU6cmVhZCIsInJvbGU6Y3JlYXRlIiwicm9sZTp1cGRhdGUiLCJyb2xlOmRlbGV0ZSIsInByb2plY3Q6cmVhZCIsInByb2plY3Q6Y3JlYXRlIiwicHJvamVjdDp1cGRhdGUiLCJwcm9qZWN0OmRlbGV0ZSIsInJpc2s6cmVhZCIsInJpc2s6Y3JlYXRlIiwicmlzazp1cGRhdGUiLCJyaXNrOmRlbGV0ZSIsImlzc3VlOnJlYWQiLCJpc3N1ZTpjcmVhdGUiLCJpc3N1ZTp1cGRhdGUiLCJpc3N1ZTpkZWxldGUiLCJ0aW1lc2hlZXQ6cmVhZCIsInRpbWVzaGVldDpjcmVhdGUiLCJ0aW1lc2hlZXQ6dXBkYXRlIiwidGltZXNoZWV0OmRlbGV0ZSIsImhvbGlkYXk6cmVhZCIsImhvbGlkYXk6Y3JlYXRlIiwiaG9saWRheTp1cGRhdGUiLCJob2xpZGF5OmRlbGV0ZSIsInNldHRpbmc6cmVhZCIsInNldHRpbmc6dXBkYXRlIiwicmVwb3J0aW5nOnJlYWQiLCJyZXBvcnRpbmc6c25hcHNob3QiLCJkYXNoYm9hcmQ6cmVhZCIsInBvcnRmb2xpbzpyZWFkIiwicmVzb3VyY2U6cmVhZCJdLCJyb2xlIjoxLCJzdWIiOjR9.SxhmCSlm3HFx0bSS4rJx8OG60mIqO1SYTpmub9utU9UER5bvtr0xOXa5maHbkB6Oo6lARSGU_GGOqra2r0-QrLTbrGiyFoXmMvE-vKm7YM4-A320q_MHwocJf5so20MYR_DlbTxOVsFnbkRdv5EIwf2Xo05kYrrb5ViveZghNwSoyv5jOye64nlmZpFB74FGlm6wJPZZ9_PYqQyy9EXdcfJ17p65CcNr3e1mljx8XciQkPByjhYWU8uxKnaoWPcUt1yhsrE3VoFENlt6a7ax2l7P_nU8G375J_sfJRBOJKGMvSj4PwA24gV2BASqoQkp18ohCQxISvhP02RekY9CFQ"
+        }
+      ]
+    }
+  ]
+}
